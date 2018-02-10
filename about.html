@@ -6,6 +6,28 @@
 	
 		<title> About Me Page of kback119 </title>
 		
+		<style>
+			.rainbow {
+				   /* Chrome, Safari, Opera */
+				-webkit-animation: rainbow 1s infinite; 
+
+				  /* Internet Explorer */
+				-ms-animation: rainbow 1s infinite;
+
+				  /* Standar Syntax */
+				animation: rainbow 1s infinite; 
+			}
+
+				/* Chrome, Safari, Opera */
+			@-webkit-keyframes rainbow{
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				80%{color: blue;}
+				100%{color: orange;}	
+			}
+		</style>
+
 	</head>
 	
 	<body>
@@ -14,7 +36,7 @@
 		
 		<p> Hello this is Kyung Back! </p>
 		
-		<p id="demo" style="display:none"> My actual name is Kyung Back. I want to become a web developer!</p>
+		<p id="demo" class = "rainbow" style="display:none"> My actual name is Kyung Back. I want to become a web developer!</p>
 		
 		<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Here To Learn more about me!</button>
 		
