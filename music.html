@@ -1,53 +1,76 @@
 <!doctype html>
 
 <html>
-<head>
-    <title> About Me Page of kback119 </title>
-    <script>
-	var music = [
-			{
-			 "Title": "Stargazing".
-			 "Artist": "Kygo",
-			 "Album": "Stargazing"
-			},
-			{ 
-			 "Title": "Stole the Show",
-			 "Artist": "Kygo",
-			 "Album": "Cloud Nine"
-			},
-			{ 
-			 "Title": "Adventure of a Lifetime",
-			 "Artist": "Coldplay",
-			 "Album": "A Head Full of Dreams"
-			},
-			{ 
-			 "Title": "Kids",
-			 "Artist": "MGMT",
-			 "Album": "Oracular Spectacular"
-			},
-			{ 
-			 "Title": "The Nights",
-			 "Artist": "Avicii",
-			 "Album": "Stories"
-			};
-    </script>
-</head>
+	<head>
+    		<title> About Me Page of kback119 </title>
+    		<script>
+			var music = [
+				{
+					 "Title": "Stargazing".
+					 "Artist": "Kygo",
+					 "Album": "Stargazing"
+				},
+				{ 
+					 "Title": "Stole the Show",
+					 "Artist": "Kygo",
+					 "Album": "Cloud Nine"
+				},
+				{ 
+					 "Title": "Adventure of a Lifetime",
+					 "Artist": "Coldplay",
+					 "Album": "A Head Full of Dreams"
+				},
+				{ 
+					 "Title": "Kids",
+					 "Artist": "MGMT",
+					 "Album": "Oracular Spectacular"
+				},
+				{ 
+					 "Title": "The Nights",
+					 "Artist": "Avicii",
+					 "Album": "Stories"
+				}
+			];
+		</script>
+	</head>
 	
-<body>	
-	<h2><font color="#77BFC7">Music playlist of kback119</font></h2> 
-	
-	document.write('<table>');
-	document.write('<tr><th>Music</th></tr>');
-	
-	for(var i = 0; i < music.Length; i++)
-	{
-		document.write('<tr><td>' + music[i] + '</td></tr>');		
-	}
-	
-	document.write('</table>');
-	
-	</script>
-	<p> Want to go back to the index? Press below </p>
-	<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
+	<body>	
+		<h1><font color="#77BFC7">Music playlist of kback119</font></h2> 
+		<h2>Music Table</h2>
+		<table id="songs"></table><br><br>
+		<h2>New Music Table</h2>
+		<table>
+			<thead>
+				<tr><th>Title</th><th>Artist</th><th>Album</th></tr>
+			</thead>
+			<tbody id="newsongs">
+				
+			</tbody>
+				
+		</table>
+		
+		<script>
+		/*document.write(users[0].First);*/
+			var text = "";
+			var newtext = "";
+			/*var x;*/
+			for (var x in music) {
+				if (users.hasSong(x)) {
+					var obj = music[x];
+					for (var y in obj) {
+						if (obj.hasSong(y)) {
+							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
+							/*document.write(y + " -> " + obj[y] + '\n');*/
+						}
+					}
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Albim'] + "</td></tr>";
+				}
+			}
+			document.getElementById("songs").innerHTML = text;
+			document.getElementById("newsongs").innerHTML = newtext;
+			/*document.getElementByID("songs").innerHTML = text;*/
+		</script>
+		<p> Want to go back to the index? Press below </p>
+		<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
 </body>	
 </html>
