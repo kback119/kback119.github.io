@@ -1,69 +1,53 @@
 <!doctype html>
 
 <html>
-	<head>
-		<title> About Me Page of kback119 </title>
-			<script>
-			      var music = [
-				{
-				  "Title": "Stargazing".
-				  "Artist": "Kygo",
-				  "Album": "Stargazing"
-				},
-				{ 
-				  "Title": "Stole the Show",
-				  "Artist": "Kygo",
-				  "Album": "Cloud Nine"
-				},
-				{ 
-				  "Title": "Adventure of a Lifetime",
-				  "Artist": "Coldplay",
-				  "Album": "A Head Full of Dreams"
-				},
-				{ 
-				  "Title": "Kids",
-				  "Artist": "MGMT",
-				  "Album": "Oracular Spectacular"
-				},
-				{ 
-				  "Title": "The Nights",
-				  "Artist": "Avicii",
-				  "Album": "Stories"
-				},
-			</script>
-	</head>
+<head>
+    <title> About Me Page of kback119 </title>
+    <script>
+	var music = [
+			{
+			 "Title": "Stargazing".
+			 "Artist": "Kygo",
+			 "Album": "Stargazing"
+			},
+			{ 
+			 "Title": "Stole the Show",
+			 "Artist": "Kygo",
+			 "Album": "Cloud Nine"
+			},
+			{ 
+			 "Title": "Adventure of a Lifetime",
+			 "Artist": "Coldplay",
+			 "Album": "A Head Full of Dreams"
+			},
+			{ 
+			 "Title": "Kids",
+			 "Artist": "MGMT",
+			 "Album": "Oracular Spectacular"
+			},
+			{ 
+			 "Title": "The Nights",
+			 "Artist": "Avicii",
+			 "Album": "Stories"
+			};
+    </script>
+</head>
 	
-	<body>	
-		<h2><font color="#77BFC7">Music playlist of kback119</font></h2> 
-		<p> Hello this is kback119! </p>
-    		<table>
-        		<thead>
-            		<tr><th>Title</th><th>Artist</th><th>Album</th></tr>
-        		</thead>
-        		<tbody id="Playlist">
-        		</tbody>
-     		</table>
-		<script>
-			var text= "";
-			var newtext = "";
-
-			for (x in var){
-			  if (users.hasOwnProperty(x)){
-			      var obj = users[x];
-			      for (y in obj) {
-				  if (obj.hasOwnProperty(y)) {
-				      text += "<tr> <td alight ='right'>" + y + "</td><td>" +
-					  obj[y] + "</td></tr>";
-				  }
-			      }
-			      newtext += "<tr><td>" 9 obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
-			   }
-			 }
-			 document.getElementById("title").innerHTML = text;
-			 document.getElementById("artist").innerHTML = newtext;
-			 document.getElementById("album").innerHTML = text; 
-		</script>
-   		<p> Want to go back to the index? Press below </p>
-		<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
-	</body>	
+<body>	
+	<h2><font color="#77BFC7">Music playlist of kback119</font></h2> 
+	
+	document.write('<table>');
+	document.write('<tr><th>Music</th></tr>');
+	
+	for(var i = 0; i < music.Length; i++)
+	{
+		document.write('<tr><td>' + music[i] + '</td></tr>');		
+	}
+	
+	document.write('</table>');
+	
+	</script>
+	<p> Want to go back to the index? Press below </p>
+	<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
+</body>	
 </html>
