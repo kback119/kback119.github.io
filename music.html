@@ -34,21 +34,21 @@
 			var text = "";
 			var newtext = "";
 			/*var x;*/
-			for (var x in users) {
+			for (var x in music) {
 				if (users.hasOwnProperty(x)) {
-					var obj = users[x];
+					var obj = music[x];
 					for (var y in obj) {
 						if (obj.hasOwnProperty(y)) {
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 							/*document.write(y + " -> " + obj[y] + '\n');*/
 						}
 					}
-					newtext += "<tr><td>" + obj['First'] + " " + obj['Last'] + "</td><td>" + obj['User ID'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
 
 				}
 			}
-			document.getElementById("people").innerHTML = text;
-			document.getElementById("newpeople").innerHTML = newtext;
+			document.getElementById("music").innerHTML = text;
+			document.getElementById("newmusic").innerHTML = newtext;
 			/*document.getElementByID("people").innerHTML = text;*/
 		</script>
 	</body>
