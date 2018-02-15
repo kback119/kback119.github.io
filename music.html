@@ -40,17 +40,11 @@
 		<h1><font color="#77BFC7">Music playlist of kback119</font></h2> 
 		<h2>Music Table</h2>
 		<table id="songs"></table><br><br>
-		<h2>New Music Table</h2>
 		<table>
 			<thead>
 				<tr><th>Title</th><th>Artist</th><th>Album</th></tr>
 			</thead>
-			<tbody id="newsongs">
-				
-			</tbody>
-				
 		</table>
-		
 		<script>
 
 			var text = "";
@@ -65,11 +59,9 @@
 							document.write(y + " -> " + obj[y] + '\n');
 						}
 					}
-					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
 				}
 			}
 			document.getElementById("songs").innerHTML = text;
-			document.getElementById("newsongs").innerHTML = newtext;
 			/*document.getElementById("songs").innerHTML = text;*/
 		</script>
 
