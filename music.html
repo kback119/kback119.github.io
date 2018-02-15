@@ -48,13 +48,12 @@
 		<script>
 
 			var text = "";
-			var newtext = "";
 			/*var x;*/
 			for (var x in music) {
-				if (users.hasOwnProperty(x)) {
+				if (users.hasSong(x)) {
 					var obj = music[x];
 					for (var y in obj) {
-						if (obj.hasOwnProperty(y)) {
+						if (obj.hasSong(y)) {
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 							document.write(y + " -> " + obj[y] + '\n');
 						}
