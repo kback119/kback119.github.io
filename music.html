@@ -16,11 +16,40 @@
 
 	</head>
 	
-	<body>	
-		<h1><font color="#77BFC7">Music playlist of kback119</font></h2> 
-		<h2>Music Table</h2>
-		<table id="songs"></table><br><br>
+	<body>
+		<h1>Javascript Looping</h1>
+		<h2>People Table</h2>
+		<table id="people"></table><br><br>
+		<h2>New People Table</h2>
+		<table>
+			<thead>
+				<tr><th>Name</th><th>User ID</th><th>First Login</th><th>City</th></tr>
+			</thead>
+			<tbody id="newpeople">
+				
+			</tbody>
+		</table>
+		<script>
+			/*document.write(users[0].First);*/
+			var text = "";
+			var newtext = "";
+			/*var x;*/
+			for (var x in users) {
+				if (users.hasOwnProperty(x)) {
+					var obj = users[x];
+					for (var y in obj) {
+						if (obj.hasOwnProperty(y)) {
+							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
+							/*document.write(y + " -> " + obj[y] + '\n');*/
+						}
+					}
+					newtext += "<tr><td>" + obj['First'] + " " + obj['Last'] + "</td><td>" + obj['User ID'] + "</td></tr>";
 
-
-	</body>	
+				}
+			}
+			document.getElementById("people").innerHTML = text;
+			document.getElementById("newpeople").innerHTML = newtext;
+			/*document.getElementByID("people").innerHTML = text;*/
+		</script>
+	</body>
 </html>
