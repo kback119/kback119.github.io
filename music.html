@@ -36,12 +36,16 @@
 				if (music.hasOwnProperty(x)) {
 					var obj = music[x];
 
-					newtext += "<tr><td>" + obj['Title'] + "     " + "</td><td>" + obj['Artist'] + "     " + "</td><td>" + obj['Album'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['Title'] + "</td><td>" + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
 
 				}
 			}
 			document.getElementById("newmusic").innerHTML = newtext;
 			/*document.getElementByID("people").innerHTML = text;*/
+
 		</script>
+		
+		<p> Want to go back to the index? Press below </p>
+		<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
 	</body>
 </html>
