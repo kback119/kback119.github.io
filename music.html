@@ -19,11 +19,18 @@
 	<body>
 		<h1><font color="#77BFC7">Music playlist of kback119</font></h2> 
 		<h2>Music Table</h2>
-		<table id="music"></table><br><br>
-
+		<table>
+			<thead>
+				<tr><th>Title</th><th>Artist</th><th>Album</th></tr>
+			</thead>
+			<tbody id="newmusic">
+				
+			</tbody>
+		</table>
 		<script>
 			/*document.write(users[0].First);*/
 			var text = "";
+			var newtext = "";
 			/*var x;*/
 			for (var x in music) {
 				if (music.hasOwnProperty(x)) {
@@ -31,12 +38,14 @@
 					for (var y in obj) {
 						if (obj.hasOwnProperty(y)) {
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
-
+							/*document.write(y + " -> " + obj[y] + '\n');*/
 						}
 					}
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
+
 				}
 			}
-			document.getElementById("music").innerHTML = text;
+			document.getElementById("newmusic").innerHTML = newtext;
 			/*document.getElementByID("people").innerHTML = text;*/
 		</script>
 	</body>
