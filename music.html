@@ -21,24 +21,6 @@
 		<h2>Music Table</h2>
 		<table id="songs"></table><br><br>
 
-		<script>
-
-			var text = "";
-			/*var x;*/
-			for (var x in music) {
-				if (users.hasOwnProperty(x)) {
-					var obj = music[x];
-					for (var y in obj) {
-						if (obj.hasOwnProperty(y)) {
-							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
-							/*document.write(y + " -> " + obj[y] + '\n');*/
-						}
-					}
-				}
-			}
-			document.getElementById("songs").innerHTML = text;
-			/*document.getElementById("songs").innerHTML = text;*/
-		</script>
 
 	</body>	
 </html>
