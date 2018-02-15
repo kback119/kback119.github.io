@@ -50,10 +50,10 @@
 			var text = "";
 			/*var x;*/
 			for (var x in music) {
-				if (users.hasSong(x)) {
+				if (users.hasOwnProperty(x)) {
 					var obj = music[x];
 					for (var y in obj) {
-						if (obj.hasSong(y)) {
+						if (obj.hasOwnProperty(y)) {
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 							document.write(y + " -> " + obj[y] + '\n');
 						}
