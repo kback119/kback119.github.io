@@ -26,6 +26,9 @@
 	<body>
 		<h1><font color="#77BFC7">Music playlist of kback119</font></h2> 
 		<h2><font color="#77BFC7">Top 5 Songs</font></h2>
+		<table id="music"></table><br><br>
+		
+		<h2>New Table</h2>
 		<table>
 			<thead>
 				<tr><th>Title</th><th>Artist</th><th>Album</th><th>Duration</th></tr>
@@ -46,7 +49,7 @@
 						+ obj['Duration'] + "</td></tr>";
 				}
 			}
-			document.getElementById("newmusic").innerHTML = newtext;
+			/*document.getElementById("newmusic").innerHTML = newtext;*/
 			/*suggestions from https://www.htmlgoodies.com/html5/javascript/calculating-the-difference-between-two-dates-in-javascript.html*/
 			function dateCalc(d) {
 				var oneDay = 1000 * 60 * 60 * 24;
@@ -78,7 +81,7 @@
 						dateCalc(obj['Date of Login']) + "</td></tr>";
 				}
 			}
-			document.getElementById("newmusic").innerHTML = text;
+			document.getElementById("music").innerHTML = text;
 			document.getElementById("newmusic").innerHTML = newtext;
 		</script>
 		<p> Want to go back to the index? Press below </p>
