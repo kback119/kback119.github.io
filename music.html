@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="https://rfollman.github.io/main-php.css">
 		<script>
 			var music = [
-				{"Title": "Stargazing", "Artist": "Kygo", "Album": "Stargazing"},
-				{"Title": "Stole the Show", "Artist": "Kygo","Album": "Cloud Nine"},
-				{"Title": "Adventure of a Lifetime", "Artist": "Coldplay", "Album": "A Head Full of Dreams"},
-				{"Title": "Kids", "Artist": "MGMT", "Album": "Oracular Spectacular"},
-				{"Title": "The Nights", "Artist": "Avicii", "Album": "Stories"}
+				{"Title": "Stargazing", "Artist": "Kygo", "Album": "Stargazing", "Duration": "3:56"},
+				{"Title": "Stole the Show", "Artist": "Kygo","Album": "Cloud Nine", "Duration": "3:43"},
+				{"Title": "Adventure of a Lifetime", "Artist": "Coldplay", "Album": "A Head Full of Dreams", "Duration": "4:23"},
+				{"Title": "Kids", "Artist": "MGMT", "Album": "Oracular Spectacular", "Duration": "5:29"},
+				{"Title": "The Nights", "Artist": "Avicii", "Album": "Stories", "Duration": "2:56"}
 				];
 		</script>
 
@@ -36,7 +36,9 @@
 				if (music.hasOwnProperty(x)) {
 					var obj = music[x];
 
-					newtext += "<tr><td>" + obj['Title'] + "</td><td>" + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['Title'] + "</td><td>" + 
+						obj['Artist'] + "</td><td>" + obj['Album'] + "</td><td>"
+						+ obj['Duration'] + "</td></tr>";
 
 				}
 			}
