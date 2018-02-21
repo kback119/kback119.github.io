@@ -35,8 +35,9 @@
 			</tbody>
 		</table>
 		
-		<h2>New Table</h2>
-		<table>
+		<h2>Second Table</h2>
+		
+		<table id="newmusic">
 			<thead>
 				<tr><th>Title</th><th>Artist</th><th>Album</th><th>Duration</th></tr>
 			</thead>
@@ -52,6 +53,15 @@
 				if (music.hasOwnProperty(x)) {
 					var obj = music[x];
 					text += "<tr><td>" + obj['Title'] + "</td><td>" + 
+						obj['Artist'] + "</td><td>" + obj['Album'] + "</td><td>"
+						+ obj['Duration'] + "</td></tr>";
+				}
+			}
+			
+			for (var x in music) {
+				if (music.hasOwnProperty(x)) {
+					var obj = music[x];
+					newtext += "<tr><td>" + obj['Title'] + "</td><td>" + 
 						obj['Artist'] + "</td><td>" + obj['Album'] + "</td><td>"
 						+ obj['Duration'] + "</td></tr>";
 				}
