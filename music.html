@@ -21,6 +21,13 @@
 				{"Title": "The Nights", "Artist": "Avicii", 
 				 "Album": "Stories", "Duration": "176s"}
 				];
+			
+			var playlist = [
+				{"Songs": "5", "Artists": "Kygo", 
+				 "Total Time": "1,227s"},
+				
+				];
+			
 		</script>
 	</head>
 	
@@ -36,13 +43,13 @@
 		</table>
 
 				
-		<h2>Second Table</h2>
+		<h2>Playlist</h2>
 		
 		<table>
 			<thead>
-				<tr><th>Title</th><th>Artist</th><th>Album</th><th>Duration</th></tr>
+				<tr><th>Songs</th><th>Artists</th><th>Total Time</th></tr>
 			</thead>
-			<tbody id="newmusic">	
+			<tbody id="playlist">	
 			</tbody>
 		</table>
 		<script>
@@ -59,18 +66,18 @@
 				}
 			}
 			
-			for (var x in music) {
-				if (music.hasOwnProperty(x)) {
-					var obj = music[x];
-					newtext += "<tr><td>" + obj['Title'] + "</td><td>" + 
-						obj['Artist'] + "</td><td>" + obj['Album'] + "</td><td>"
-						+ obj['Duration'] + "</td></tr>";
+			for (var x in playlist) {
+				if (playlist.hasOwnProperty(x)) {
+					var obj = playlist[x];
+					newtext += "<tr><td>" + obj['Songs'] + "</td><td>" + 
+						obj['Artists'] + "</td><td>"
+						+ obj['Total Time'] + "</td></tr>";
 				}
 			}
 			/*suggestions from https://www.htmlgoodies.com/html5/javascript/calculating-the-difference-between-two-dates-in-javascript.html*/
 			
 			document.getElementById("music").innerHTML = text;
-			document.getElementById("newmusic").innerHTML = newtext;
+			document.getElementById("playlist").innerHTML = newtext;
 		</script>
 		<p> Want to go back to the index? Press below </p>
 		<button type="button" onClick=window.location.replace("https://kback119.github.io/")> Back to index page</button>
