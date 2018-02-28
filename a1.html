@@ -269,6 +269,16 @@ var organizations = [
 		}
 	}
 	document.getElementById("orgtab").innerHTML = text;
+	
+	var count = 0;
+	for (var k in organizations) {
+    	if (Size.hasOwnProperty(k)) {
+       		++count;
+    		}
+	}
+	alert("Found " + count + " properties specific to foo");
+	
+	
 </script>
 
 </body>
