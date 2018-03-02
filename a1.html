@@ -294,9 +294,10 @@ var organizations = [
 	    var z = document.createElement("TD");
 	    var t = document.createTextNode("cell");
 	    z.appendChild(t);
+	    document.getElementById("myTr").appendChild(z);
+		
 	    for (x in organizations)
 	    document.write(x + " --- " + organizations[x] + "<br />")
-	    document.getElementById("myTr").appendChild(z);
 
 	
 
