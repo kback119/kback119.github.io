@@ -248,7 +248,7 @@ var organizations = [
 			<thead>
 				<tr><th>Statistics</th></tr>
 			</thead>
-			<tbody id="myTr">
+			<tbody id="stattab">
 				
 			</tbody>
 		</table>
@@ -282,24 +282,32 @@ var organizations = [
 	}
 	document.getElementById("orgtab").innerHTML = text;
 	
-	function statFunction(){
-	    var x = document.createElement("TABLE");
-	    x.setAttribute("id", "myTable");
-	    document.body.appendChild(x);
-
-	    var y = document.createElement("TR");
-	    y.setAttribute("id", "myTr");
-	    document.getElementById("myTable").appendChild(y);
-
-	    var z = document.createElement("TD");
-	    var t = document.createTextNode("cell");
-	    z.appendChild(t);
-	    document.getElementById("myTr").appendChild(z);
-		
-	for (x in organizations)
-	    document.write(x + " --- " + organizations[x] + "<br />")
-
-	
+	function hideRow(obj) {
+		obj.style.display = 'none';
+	}
+	function orgTotal() {
+		//total organizations
+	}
+	var text = '';
+	for (var x in organizations) {
+		if (organizations.hasOwnProperty(x)) {
+			var obj = organizations[x];
+			text += "<tr onclick='hideRow(this)'><td>" +
+				obj['Region'] + "</td><td>" +
+				obj['Country'] + "</td><td>" + 
+				obj['Country Income Level'] + "</td><td>" +
+				obj['Organization Name'] + " / " + obj['Organization Type'] + "</td><td>" +
+				obj['Sectors'] + "</td><td>" + 
+				obj['Description'] + "</td><td>" +
+				obj['City'] + ", " + obj['State/Region'] + "</td><td>" +
+				obj['Founding Year'] + "</td><td>" +
+				obj['Size'] + "</td><td>" +
+				obj['Type of Data Used'] + "</td><td>";
+				obj['profileID'] + "</td></tr>";
+			
+		}
+	}
+	document.getElementById("stattab").innerHTML = text;
 
 
 	}
