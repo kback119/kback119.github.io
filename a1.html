@@ -295,7 +295,22 @@ var organizations = [
 	    var z = document.createElement("TD");
 	    var t = document.createTextNode("cell");
 	    z.appendChild(t);
-	    document.getElementById("myTr").appendChild(z);
+	    for (var x in organizations) {
+		if (organizations.hasOwnProperty(x)) {
+			var obj = organizations[x];
+			newtext += "<tr onclick='hideRow(this)'><td>" +
+				obj['Region'] + "</td><td>" +
+				obj['Country'] + "</td><td>" + 
+				obj['Country Income Level'] + "</td><td>" +
+				obj['Organization Name'] + " / " + obj['Organization Type'] + "</td><td>" +
+				obj['Sectors'] + "</td><td>" + 
+				obj['Description'] + "</td><td>" +
+				obj['City'] + ", " + obj['State/Region'] + "</td><td>" +
+				obj['Founding Year'] + "</td><td>" +
+				obj['Size'] + "</td><td>" +
+				obj['Type of Data Used'] + "</td><td>";
+				obj['profileID'] + "</td></tr>";
+	    document.getElementById("myTr").appendChild(z) newtext;
 	}
 	
 </script>
