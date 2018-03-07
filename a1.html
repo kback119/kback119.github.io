@@ -1,5 +1,4 @@
 
-
 <html>
 <head>
 <!-- CSS -->
@@ -246,6 +245,14 @@ var organizations = [
 					
 			</tbody>
 		</table>
+		<table>
+			<thead>
+				<tr><th>Statistics</th></tr>
+			</thead>
+			<tbody id="myTr">
+				
+			</tbody>
+		</table>
 	</div>
 
 <script>
@@ -274,44 +281,11 @@ var organizations = [
 			
 		}
 	}
-				var y = obj.getElementsByClassName('num');
-				var tn = document.getElementsByClassName('totnum')[0].innerText;
-				document.getElementsByClassName('totnum')[0].innerText = tn - y[0].innerText;
-				obj.style.display = 'none';
-			}
+	document.getElementById("orgtab").innerHTML = text;
+	
+	
+	
+</script>
 
-	/*suggestions from https://www.htmlgoodies.com/html5/javascript/calculating-the-difference-between-two-dates-in-javascript.html*/
-	function dateCalc(d) {
-		var oneDay = 1000 * 60 * 60 * 24;
-		var month = d.split("/")[0] - 1,
-			day = d.split("/")[1],
-			year = d.split("/")[2]
-		if (year.length == 2) {year = '20' + year;}
-		date1 = new Date(year, month, day);
-		var date1_ms = date1.getTime();
-		var date2 = new Date();
-		var date2_ms = date2.getTime();
-		var diff_ms = date2_ms - date1_ms;
-		return Math.round(diff_ms/oneDay);
-	}
-			
-	var newtext = "";
-	var totdays = 0;
-	for (var x in users) {
-		if (users.hasOwnProperty(x)) {
-			var obj = users[x];
-			newtext += "<tr onclick='hideRow(this)'><td>" + obj['First'] + " " + obj['Last'] + "</td><td>" + 
-				obj['User ID'] + "</td><td>" + 
-				obj['Date of Login'] + "</td><td>" +
-				obj['City'] + "</td><td align='center' class='num'>" +
-				dateCalc(obj['Date of Login']) + "</td></tr>";
-			totdays += dateCalc(obj['Date of Login']);
-		}
-	}
-	newtext += "<tr><td colspan='4'>Total Days</td><td align='center' class='totnum'>" + totdays + "</td></tr>";
-	document.getElementById("newpeople").innerHTML = newtext;
-	
-	
-	</script>
 </body>
 </html>
