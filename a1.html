@@ -284,7 +284,7 @@ var organizations = [
 			<thead>
 				<tr><th>Statistics</th><th>Count</th></tr>
 			</thead>
-			<tbody id="Forgtab">
+			<tbody id="Ftab">
 					
 			</tbody>
 		</table>
@@ -299,16 +299,15 @@ var organizations = [
 	}
 	var text = '';
 	for (var x in organizations) {
-		if (organizations.hasOwnProperty(x)) {
-			var obj = organizations[x];
-			text += "<tr onclick='hideRow(this)'><td>" +
-				obj['Region'] + "</td><td>" +
-				obj['profileID'] + "</td></tr>";
+		var obj = organizations[x];
+		text += "<tr onclick='hideRow(this)'><td>" +
+			obj['Hello'] + "</td><td>" +
+			obj['World'] + "</td></tr>";
 
 		
-		}
+		
 	}
-	document.getElementById("Forgtab").innerHTML = text;
+	document.getElementById("Ftab").innerHTML = text;
 
 	</script>
 	
