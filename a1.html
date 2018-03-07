@@ -290,7 +290,7 @@ var organizations = [
 		</table>
 	</div>
 
-<script>
+	<script>
 	function hideRow(obj) {
 		obj.style.display = 'none';
 	}
@@ -302,14 +302,15 @@ var organizations = [
 		if (organizations.hasOwnProperty(x)) {
 			var obj = organizations[x];
 			text += "<tr onclick='hideRow(this)'><td>" +
-				obj['Region'] + "</td><td>" +
-				obj['profileID'] + "</td></tr>";		
+				obj['Organizations in the United States'] + "</td><td>" +
+				obj['profileID'] + "</td></tr>";
+
+		
 		}
 	}
 	document.getElementById("Forgtab").innerHTML = text;
 
-	
-</script>
+	</script>
 	
 	
 
