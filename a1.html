@@ -299,15 +299,14 @@ var organizations = [
 	}
 	var text = '';
 	for (var x in organizations) {
-		var obj = organizations[x];
-		text += "<tr onclick='hideRow(this)'><td>" +
-			obj['Hello'] + "</td><td>" +
-			obj['World'] + "</td></tr>";
-
-		
-		
+		if (organizations.hasOwnProperty(x)) {
+			var obj = organizations[x];
+			text += "<tr onclick='hideRow(this)'><td>" +
+				obj['Region'] + "</td><td>" +
+				obj['profileID'] + "</td></tr>";		
+		}
 	}
-	document.getElementById("Ftab").innerHTML = text;
+	document.getElementById("orgtab").innerHTML = text;
 
 	</script>
 	
