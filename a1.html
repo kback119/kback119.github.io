@@ -282,7 +282,7 @@ var organizations = [
 		<h1>Statistics Table</h1>
 		<table>
 			<thead>
-				<tr><th>Statistics</th><th>Remaining</th></tr>
+				<tr><th>Statistics</th><th>Count</th></tr>
 			</thead>
 			<tbody id="Forgtab">
 					
@@ -303,15 +303,6 @@ var organizations = [
 			var obj = organizations[x];
 			text += "<tr onclick='hideRow(this)'><td>" +
 				obj['Region'] + "</td><td>" +
-				obj['Country'] + "</td><td>" + 
-				obj['Country Income Level'] + "</td><td>" +
-				obj['Organization Name'] + " / " + obj['Organization Type'] + "</td><td>" +
-				obj['Sectors'] + "</td><td>" + 
-				obj['Description'] + "</td><td>" +
-				obj['City'] + ", " + obj['State/Region'] + "</td><td>" +
-				obj['Founding Year'] + "</td><td>" +
-				obj['Size'] + "</td><td>" +
-				obj['Type of Data Used'] + "</td><td>";
 				obj['profileID'] + "</td></tr>";		
 		}
 	}
