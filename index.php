@@ -1,1 +1,5 @@
-Hi there!
+<?php
+
+echo Hello World
+  
+?>
