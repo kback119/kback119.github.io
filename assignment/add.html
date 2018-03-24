@@ -1,0 +1,158 @@
+<?php
+if(isset($_POST['Submit'])){
+
+  $f_name=trim($_POST["f_name"]);
+  $l_name=trim($_POST["l_name"]);
+  $dob=trim($_POST["dob"]);
+  $country=trim($_POST["country"]);
+  $email=trim($_POST["email"]);
+  $tel=trim($_POST["tel"]);
+
+  if($f_name =="") {
+    $errorMsg=  "error : You did not enter a first name.";
+    $code= "1" ;
+  }
+  if($l_name =="") {
+    $errorMsg=  "error : You did not enter a last name.";
+    $code= "1" ;
+  }
+  if($country =="") {
+    $errorMsg=  "error : You did not enter a last name.";
+    $code= "1" ;
+  }
+  elseif($tel == "") {
+    $errorMsg=  "error : Please enter number.";
+    $code= "2";
+  }
+  //check if the number field is numeric
+  elseif(is_numeric(trim($tel)) == false){
+    $errorMsg=  "error : Please enter numeric value.";
+    $code= "2";
+  }
+  elseif(strlen($tel)<10){
+    $errorMsg=  "error : Number should be ten digits.";
+    $code= "2";
+  }
+  //check if email field is empty
+  elseif($email == ""){
+    $errorMsg=  "error : You did not enter a email.";
+    $code= "3";
+} //check for valid email 
+elseif(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)){
+  $errorMsg= 'error : You did not enter a valid email.';
+  $code= "3";
+}
+else{
+  echo "Success";
+  //final code will execute here.
+}
+
+}
+?>
+
+
+
+<html>
+<head>
+<!-- CSS -->
+<style type="text/css">
+	div {
+		margin-bottom: 20px;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		
+	}
+	h1 {
+    color: black;
+	font: georgian;
+    text-align: center;
+	}
+	th,td {
+	    border: 1px solid #ddd;
+	    padding: 8px;
+	    height: 50px;
+	    padding: 15px;
+            text-align: left;
+		
+	}
+	
+	table {
+    		border-collapse: collapse;
+		height: 50px;
+		padding: 15px;
+    	margin-left: auto;
+		margin-right: auto;
+		
+	}
+	tr:nth-child(even){background-color: #f2f2f2;}
+	tr:hover {background-color: #ddd;}
+	
+	th {
+	    padding-top: 12px;
+	    padding-bottom: 12px;
+	    text-align: left;
+	    background-color: #CCCCCC;
+	    color: black;
+	}
+</style>
+
+
+    <title>Registration</title>
+</head>
+ 
+<body>
+
+	<h1> Registration Table </h1>
+ 
+    <form action="add.php" method="post" name="form1">
+        <table width="25%" border="0">
+            <tr> 
+                <td>First Name:</td>
+                <td><input type="text" name="f_name" ></td>
+            </tr>
+            <tr> 
+                <td>Last Name:</td>
+                <td><input type="text" name="l_name" ></td>
+            </tr>
+            <tr> 
+                <td>Date of Birth:</td>
+                <td><input type="date" name="birthdate" ></td>
+            </tr>
+            <tr> 
+                <td>Country:</td>
+                <td><input type="text" name="country" ></td>
+            </tr>
+            <tr> 
+                <td>Email:</td>
+                <td><input type="email" name="email" ></td>
+            </tr>
+            <tr> 
+                <td>Phone number:</td>
+                <td><input type="tel" name="tel" ></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td><input type="submit" name="Submit" value="Register"></td>
+            </tr>
+        </table>	
+
+	<br/><br/>
+	<a href="index.php"
+	style="margin: 0 auto; display:block; text-align: center"
+	}>Index Table</a>
+	
+	</br>
+	
+	<a href="tableinfo.php"
+	style="margin: 0 auto; display:block; text-align: center"
+	}>Data Table</a>
+	
+
+	
+	<br/>
+	
+
+    </form>
+</body>
+</html>
